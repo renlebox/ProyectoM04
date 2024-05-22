@@ -14,6 +14,11 @@
             {% for media in item.media_content %}
                 <p><img src="{{media.url}}" alt="{{item.title}}" /></p>
             {% endfor %}
+            <p>Descripcion: {{item.description}}</p>
+            <p>Fecha de publicación: {{item.published}}</p>
+            <p>Categoria: {{item.category}}</p>
+            <p>Autor: {{item.author}}</p>
+            <p>Ultima actualitzación: {{item.modified}}</p>
         </p>
     {% endfor %}
 </body>

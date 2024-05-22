@@ -49,11 +49,11 @@ def hola2():
     valor_color_de_fons = request.args.get('color-de-fons', default = "white", type = str)
     valor_gatete = request.args.get('gatete', default = False, type = bool)
     return render_template("exemples/hola/salutacio_resultat.html", 
-                           salutacio = valor_salutacio, 
-                           quantes = valor_quantes,
-                           color_de_fons = valor_color_de_fons,
-                           gatete = valor_gatete
-                           )
+        salutacio = valor_salutacio, 
+        quantes = valor_quantes,
+        color_de_fons = valor_color_de_fons,
+        gatete = valor_gatete
+        )
 
 #
 # Exemple de formulari amb post
@@ -85,10 +85,10 @@ def lavanguardia(seccio):
 
 def get_rss_lavanguardia(seccio):
     # MODE REMOT: versió on descarrega l'XML de la web
-    # xml = f"https://www.lavanguardia.com/rss/{seccio}.xml"
+    xml = f"https://www.lavanguardia.com/rss/{seccio}.xml"
     
     # MODE LOCAL: versió que fa servir l'XML descarregat
-    xml = f"./rss/lavanguardia/{seccio}.xml"
+    # xml = f"./rss/lavanguardia/{seccio}.xml"
     
     rss = feedparser.parse(xml)
     return rss
