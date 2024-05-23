@@ -1,28 +1,59 @@
-# Exemple de README
+### Pasos per desplegar l'aplicatiu:
 
-Això és un [enllaç](https://google.com) i això són **negretes** i *cursiva* i ara ve una llista:
+1. **Requisitos**: Lista los requisitos del proyecto, incluyendo Python y pip.
+2. **Configuración del Entorno Virtual**: Proporciona instrucciones para instalar `virtualenv`, crear y activar el entorno virtual, y instalar las dependencias.
+3. **Iniciar la Aplicación**: Explica cómo iniciar la aplicación Flask.
+4. **Uso del Modo Remoto o Local**: Detalla cómo cambiar entre el modo remoto y local para el XML de La Vanguardia.
+5. **Recursos**: Incluye enlaces a la documentación de Flask y a la guía sobre entornos virtuales de Python.
+6. **Estructura del Proyecto**: Muestra la estructura del proyecto para ayudar a los usuarios a entender dónde deben ir los archivos.
+7. **Contribuciones**: Invita a la comunidad a contribuir al proyecto.
 
-* hola
-* que
-* tal
 
-Potser vols una llista numerada:
+# Configuración del Entorno y Ejecución de la Aplicación Flask
 
-1. tot
-2. bé
-3. gràcies
+## Requisitos
 
-## Un títol de nivell 2
+- Python 3.x
+- pip (Python package installer)
+- Virtualenv (opcional pero recomendado)
 
-I un troç de codi
+## Configuración del Entorno Virtual
 
-    apt-get install virus
+### Instalación de Virtualenv
 
-O aixó també és un troç de codi:
+Si no tienes `virtualenv` instalado, puedes instalarlo usando `pip`:
 
-```python
-a = 2 + 3
-```
-També pots integrar-ho `a=2` al paràgraf.
+```bash
+pip install virtualenv
+``` 
+# Creacion y activacion del entorno 
+```bash
+virtualenv venv
 
----
+``` 
+## Activar el entorno virtual:
+```bash
+venv\Scripts\activate
+
+``` 
+## Instalación de Dependencias
+```bash
+pip install -r requirements.txt
+
+
+``` 
+# Iniciar la Aplicación
+```bash
+flask run
+
+``` 
+
+## Modos de uso: 
+### Uso del Modo Remoto o Local
+La aplicación puede funcionar en modo remoto, descargando el XML directamente de la web de La Vanguardia, o en modo local, utilizando un archivo XML descargado.
+
+### Modo Remoto
+El modo remoto está configurado por defecto. La aplicación descargará el XML de La Vanguardia cada vez que se acceda a una sección.
+
+### Modo Local
+Para utilizar el modo local, comenta la línea del modo remoto y descomenta la línea del modo local en la función get_rss_lavanguardia en app.py:

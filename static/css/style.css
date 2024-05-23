@@ -1,56 +1,44 @@
 body {
-    background-color: beige;
+    background-color: rgb(195, 241, 157);
 }
 
 .container {
-    display: flex;
+    margin-top: 20px;
 }
 
-.vertical-nav {
-    background-color: #333;
-    color: #fff;
-    width: 200px;
-    padding: 15px;
-    border: 2px solid #555;
+.navbar {
     border-radius: 10px;
-    margin-right: 20px;
-}
-
-.vertical-nav ul {
-    list-style-type: none;
-    padding: 0;
-}
-
-.vertical-nav ul li {
-    padding: 10px;
-}
-
-.vertical-nav ul li a {
-    color: #fff;
-    text-decoration: none;
-    display: block;
-    transition: background-color 0.3s;
-}
-
-.vertical-nav ul li a:hover {
-    background-color: #575757;
-    border-radius: 5px;
-}
-
-.content {
-    flex-grow: 1;
-    padding: 20px;
+    margin-bottom: 20px;
+    background-color: rgb(123, 240, 112);
 }
 
 h1 {
-    color: #333;
+    color: #104b29;
     text-align: center;
     margin-bottom: 30px;
+}
+
+
+.carousel {
+    max-height: 200px; /* Ajusta la altura máxima del carrusel */
+    overflow: hidden;
+    border-radius: 10px;
+    margin-bottom: 20px;
 }
 
 .carousel-item img {
     width: 100%;
     height: auto;
-    max-height: 600px;
+    max-height: 200px; /* Ajusta la altura máxima de las imágenes del carrusel */
     object-fit: cover;
+    border-radius: 10px;
+}
+/* Card Styling */
+.card {
+    border-radius: 10px;
+}
+
+.card img {
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
 }
